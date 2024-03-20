@@ -36,17 +36,22 @@
     height: 80%;
     color: #B9D6F2;
     z-index: 2;
-    gap: 16px;
+    gap:16px;
     text-align: justify;
     font-family: 'Roboto Mono', monospace;
     font-size: 20px;
+    overflow-x: auto;
+
 }
 
 .detail {
     display: flex;
     flex-direction: column;
-    overflow-x: auto;
     font-size: 16px;
+    border-radius: 5px;
+    border: solid 1px;
+    padding: 32px;
+    margin-top:100px;
 }
 
 .title {
@@ -78,21 +83,34 @@
 }
 
 .capacities {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 120px;
-    gap: 10px;
-    padding: 16px;
+    display: flex;   
+    justify-content: center;
+    flex-wrap:wrap;
+    padding: 32px;
+    gap:16px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: solid 1px;
+    width: 33%;
+    height:auto;
 }
 
 .bars {
     display: flex;
     align-items: flex-end;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 20px;
-    font-size: 10px;
+
+}
+
+.category {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+    justify-content: center;
+    gap:16px; 
+    width: 100%;
+    
 }
 
 .downloadCV {

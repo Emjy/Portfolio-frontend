@@ -22,34 +22,48 @@ export default function about() {
 
     // Data 
     const capacitiesData = [
-        { name: 'React.js', pct: 75 },
-        { name: 'React Native.js', pct: 75 },
-        { name: 'HTML/CSS', pct: 80, },
-        { name: 'Next.js', pct: 100, },
-        { name: 'Express.js', pct: 90, },
-        { name: 'Swift', pct: 90, },
-        { name: 'SwiftUI', pct: 75, },
-        { name: 'RPG/CL', pct: 100, },
-        { name: 'SQL', pct: 90, },
-        { name: 'NoSQL', pct: 75, },
-        { name: 'Adelia', pct: 100, },
-    ]
+        { name: 'React.js', pct: 75, stack: 'front' },
+        { name: 'ReactNative.js', pct: 75, stack: 'front' },
+        { name: 'HTML/CSS', pct: 80, stack: 'front' },
+        { name: 'Next.js', pct: 100, stack: 'front' },
+        { name: 'Express.js', pct: 90, stack: 'back' },
+        { name: 'Swift', pct: 90, stack: 'back' },
+        { name: 'SwiftUI', pct: 75, stack: 'back' },
+        { name: 'RPG/CL', pct: 100, stack: 'back' },
+        { name: 'SQL', pct: 90, stack: 'back' },
+        { name: 'NoSQL', pct: 75, stack: 'back' },
+        { name: 'Adelia', pct: 100, stack: 'back' },
+        { name: 'Rdi', pct: 100, stack: 'outil' },
+        { name: 'VSCode', pct: 100, stack: 'outil' },
+        { name: 'Git', pct: 100, stack: 'outil' },
+        { name: 'Xcode', pct: 100, stack: 'outil' },
+        { name: 'Figma', pct: 100, stack: 'outil' },
+        { name: 'MongoDB', pct: 100, stack: 'outil' },
+        { name: 'Vercel', pct: 100, stack: 'outil' },
 
-    // Mapping des compétences 
-    const capacities = capacitiesData.map((item, index) => {
-        return (
-            <div className={styles.capacities}>
-                {item.name}
-                <LinearProgress
-                    variant="determinate"
-                    value={item.pct}
-                    style={{ height: '3px', width: '120px', borderRadius: '20px', backgroundColor: 'lightgrey', opacity: 1 }}
-                    sx={{ '& .MuiLinearProgress-bar': { backgroundColor: '#DE8F6E' }, }}
-                />
-            </div>
+    ];
 
-        )
-    })
+    // Séparation des technologies par stack
+    const frontEndTechnologies = capacitiesData.filter(item => item.stack === 'front');
+    const backEndTechnologies = capacitiesData.filter(item => item.stack === 'back');
+    const toolTechnologies = capacitiesData.filter(item => item.stack === 'outil');
+
+    // Fonction pour générer le markup des technologies par catégorie
+    const generateMarkupForStack = (technologies) => {
+        return technologies.map((item) => {
+            return (
+                <div style={{display:'flex', flexWrap:'wrap'}}>
+                #{item.name}
+                </div>
+            )
+        });
+    };
+
+    // Génération du markup pour chaque stack
+    const frontEndMarkup = generateMarkupForStack(frontEndTechnologies);
+    const backEndMarkup = generateMarkupForStack(backEndTechnologies);
+    const toolMarkup = generateMarkupForStack(toolTechnologies);
+
 
     return (
 
@@ -71,22 +85,36 @@ export default function about() {
                             {'mon cv'}
                             <div className={styles.fleche}>
                                 <ArrowDownwardRoundedIcon />
-
                             </div>
                         </div>
-                    </div>
-
-                    <div className={styles.bars}>
-                        {capacities}
                     </div>
 
                     <div className={styles.separateur}>
                         {' '}
                     </div>
 
+                    <div className={styles.category}>
+
+                        <div className={styles.capacities}>
+                            {frontEndMarkup}
+                        </div>
+
+                        <div className={styles.capacities}>
+                            {backEndMarkup}
+                        </div>
+
+                        <div className={styles.capacities}>
+                            {toolMarkup}
+                        </div>
+
+
+                    </div>
+
+                    
+
                     <div className={styles.detail}>
 
-                        <div style={{fontSize:'40px'}} >
+                        <div style={{ fontSize: '40px' }} >
                             Hello World ! Je m'appelle Emilien Giraud.
                         </div>
 
