@@ -9,6 +9,8 @@ import BackP5 from '../components/HomePage/Background';
 
 // Material UI  
 import TextField from '@mui/material/TextField';
+import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
+
 
 
 export default function contact() {
@@ -20,50 +22,55 @@ export default function contact() {
             </div>
 
             <div className={styles.page}>
-                
+
                 <OpenMenu />
 
 
                 <div className={styles.inputs}>
 
-                    <div>
-                        <TextField
-                            id="outlined-uncontrolled"
-                            label="Nom"
-                            defaultValue=""
-                            className={styles.input}
-                        />
 
-                        <TextField
-                            id="outlined-uncontrolled"
-                            label="Prénom"
-                            defaultValue=""
-                            className={styles.input}
-                        />
-                    </div>
+                    <TextField
+                        id="outlined-uncontrolled"
+                        label="Nom"
+                        defaultValue=""
+                        className={styles.input}
+                        variant="filled"
+                    />
+
+                    <TextField
+                        id="outlined-uncontrolled"
+                        label="Prénom"
+                        defaultValue=""
+                        variant="filled"
+                        className={styles.input}
+                    />
+
 
 
                     <TextField
                         id="outlined-uncontrolled"
                         label="Société"
                         defaultValue=""
+                        variant="filled"
                         className={styles.input}
                     />
-                    <div>
-                        <TextField
-                            id="outlined-uncontrolled"
-                            label="Téléphone"
-                            defaultValue=""
-                            className={styles.input}
-                        />
 
-                        <TextField
-                            id="outlined-uncontrolled"
-                            label="Mail"
-                            defaultValue=""
-                            className={styles.input}
-                        />
-                    </div>
+                    <TextField
+                        id="outlined-uncontrolled"
+                        label="Téléphone"
+                        defaultValue=""
+                        variant="filled"
+                        className={styles.input}
+                    />
+
+                    <TextField
+                        id="outlined-uncontrolled"
+                        label="Mail"
+                        defaultValue=""
+                        variant="filled"
+                        className={styles.input}
+                    />
+
 
 
                     <TextField
@@ -72,9 +79,14 @@ export default function contact() {
                         multiline
                         maxRows={30}
                         rows={10}
+                        variant="filled"
                         className={styles.input}
                     />
 
+                </div>
+
+                <div className={styles.links} >
+                    <ArrowForwardRoundedIcon />
                 </div>
 
 
