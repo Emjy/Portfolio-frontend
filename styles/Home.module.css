@@ -1,22 +1,73 @@
-.main {
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  z-index: 0;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+    justify-content: space-between;
+    color: #B9D6F2;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  justify-content: center;
+  gap: 80px;
+  }
+  
+  .name {
+    color: #F9FBB2;
+  }
+  
+  .presentation {
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  font-family: 'Major Mono Display', monospace;
+    font-size: 80px;
+    color: #B9D6F2;
+    gap: 40px;
+}
+
+.subText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 24px;
+  gap: 24px;
+}
+
+.links {
+  display: flex;
+  width: 10%;
+  padding: 8px 16px;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
+  gap: 16px;
+  font-family: 'Roboto Mono', monospace;
+  border: 1px solid;
+  border-radius: 30px;
 }
 
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+.links:hover {
+  cursor: pointer;
+  background-color: #F9FBB2;
 }

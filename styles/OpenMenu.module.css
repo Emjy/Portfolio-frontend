@@ -1,0 +1,13 @@
+.menuIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #B9D6F2;
+    align-self: last baseline;
+    margin: 50px;
+}
+
+.menuIcon:hover {
+    cursor:pointer;
+    color: #F9FBB2;
+}

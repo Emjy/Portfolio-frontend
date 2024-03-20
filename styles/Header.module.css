@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&display=swap');
+
+.container {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vh;
+    font-family: 'Assistant', sans-serif;
+    font-size: 16px;
+}
+
+.avatarContainer {
+    height: 100px;
+    width: 100px;
+}
+
+.avatar {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.leftBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: 50px;
+    gap: 16px;
+    padding-inline: 24px;
+
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+
+}
+
+.navBar p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    width: 100px;
+    height: 32px;
+    border-radius: 100px;
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+.page {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    object-fit: cover;
+    width: 800px;
+    height: 800px;
+    border-top-left-radius: 30px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.containerImage {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.stack {
+    color: #B9D6F2;
+    font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+    padding: 16px;
+}
