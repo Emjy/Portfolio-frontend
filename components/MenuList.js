@@ -18,7 +18,7 @@ export default function MenuList() {
         { number: '01', name: 'Accueil', router: '/' },
         { number: '02', name: 'Projets', router: '/projets' },
         { number: '03', name: 'A propos', router: '/about' },
-        // { number: '04', name: 'Contact', router: '/' }
+        { number: '04', name: 'Contact', router: '/contact' }
     ]
 
     const menu = menuData.map((menu, index) => {
