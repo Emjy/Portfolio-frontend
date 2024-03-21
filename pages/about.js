@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router';
 
 // Styles
 import styles from '../styles/About.module.css';
@@ -14,6 +15,7 @@ import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
 
 export default function about() {
 
+    const router = useRouter();
 
     // Fonctio nde download du CV
     const handleDownloadCV = () => {
@@ -75,7 +77,7 @@ export default function about() {
 
             <div className={styles.page}>
 
-                <OpenMenu />
+                <OpenMenu chemin={router.pathname} />
 
                 <div className={styles.description}>
 

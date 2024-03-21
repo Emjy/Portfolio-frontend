@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 
 
 // Cmponents
@@ -14,6 +16,9 @@ import { imageListClasses } from '@mui/material';
 
 
 export default function projets() {
+
+    const router = useRouter();
+    console.log(router.pathname)
 
     // States 
     const [isHovered, setIsHovered] = useState(false);
@@ -87,7 +92,7 @@ export default function projets() {
 
             <div className={styles.page}>
 
-                <OpenMenu />
+            <OpenMenu chemin={router.pathname} />
 
                 <div className={styles.liste}>
 

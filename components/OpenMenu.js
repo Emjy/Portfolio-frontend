@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router';
- 
+
 // Styles
 import styles from '../styles/OpenMenu.module.css';
 
@@ -14,7 +14,7 @@ export default function OpenMenu() {
 
     return (
         <div className={styles.menuIcon}>
-            <MenuRoundedIcon style={{ fontSize: '50px' }} onClick={() => router.push('./menu')} />
+            <MenuRoundedIcon  style={{ fontSize: '50px' }} onClick={() => router.push('./menu')} />
         </div>
     )
 }

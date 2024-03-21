@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/router';
+import { useDispatch, useSelector } from "react-redux";
+import { changeNavigation } from "../reducers/navigation";
 
 // Style
 import styles from '../styles/MenuList.module.css';
@@ -12,7 +14,17 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 export default function MenuList() {
 
-    const router = useRouter();
+    const router = useRouter('./');
+    const path = useSelector((state) => state.navigation.value);
+
+    const dispatch = useDispatch();
+    
+    const navigate = (path) => {
+        dispatch(changeNavigation(path));
+        router.push(path)
+    };
+
+    const [chemin, setChemin] = useState('./');
 
     const menuData = [
         { number: '01', name: 'Accueil', router: '/' },
@@ -26,7 +38,7 @@ export default function MenuList() {
             <div
                 key={index}
                 className={styles.menuItem}
-                onClick={() => router.push(menu.router)}
+                onClick={() => navigate(menu.router)}
                 style={{ animationDelay: `${index * 0.05}s` }}
             >
                 <div className={styles.menuNumber}>
@@ -44,7 +56,7 @@ export default function MenuList() {
         <>
 
             <div className={styles.closeIcon}>
-                <CloseRoundedIcon className={styles.icon} onClick={() => router.push('./')} />
+                <CloseRoundedIcon className={styles.icon} onClick={() => router.push(path)} />
             </div>
 
             <div className={styles.menu}>

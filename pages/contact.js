@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router';
 
 // Styles
 import styles from '../styles/Contact.module.css';
@@ -14,6 +15,8 @@ import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 
 
 export default function contact() {
+
+    const router = useRouter();
 
     const [errorMessage, setErrorMessage] = useState('')
 
@@ -64,7 +67,7 @@ export default function contact() {
 
             <div className={styles.page}>
 
-            <OpenMenu />
+            <OpenMenu chemin={router.pathname} />
 
                 <div className={styles.title}>
                     {'Contact'}

@@ -17,7 +17,7 @@ export default function menu() {
             </div>
 
             <div className={styles.page}>
-                <MenuList />
+                <MenuList  />
             </div>
 
         </>
