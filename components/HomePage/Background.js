@@ -73,7 +73,7 @@ const ParticleSketch = () => {
     }, []);
 
     return (
-        <div ref={canvasRef}></div>
+        <div ref={canvasRef} style={{width:'100%', height:'100%'}}></div>
     );
 };
 

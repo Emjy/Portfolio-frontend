@@ -61,9 +61,11 @@ export default function contact() {
                 <BackP5 />
             </div>
 
+            <OpenMenu />
+
+
             <div className={styles.page}>
 
-                <OpenMenu />
 
                 <div className={styles.title}>
                     {'Contact'}
@@ -133,22 +135,24 @@ export default function contact() {
                         label="Message"
                         multiline
                         maxRows={30}
-                        rows={10}
+                        rows={5}
                         variant="filled"
                         className={styles.input}
                         onChange={(e) => setMessage(e.target.value)}
                         value={message}
                     />
 
+                    <div className={styles.links} >
+                        <ArrowForwardRoundedIcon onClick={() => handleSendMessage()} />
+                    </div>
+
+                    <div className={styles.errormessage} >
+                        {errorMessage}
+                    </div>
+
                 </div>
 
-                <div className={styles.links} >
-                    <ArrowForwardRoundedIcon onClick={() => handleSendMessage()} />
-                </div>
 
-                <div className={styles.errormessage} >
-                    {errorMessage}
-                </div>
 
 
 
