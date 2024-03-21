@@ -61,11 +61,10 @@ export default function contact() {
                 <BackP5 />
             </div>
 
-            <OpenMenu />
-
 
             <div className={styles.page}>
 
+            <OpenMenu />
 
                 <div className={styles.title}>
                     {'Contact'}
