@@ -45,7 +45,7 @@ export default function projets() {
         { projectName: 'PokeSounds', stack: ['reactNative.js'], collabs: ['Emilien Giraud'], year: '2024', photo: 'pokesound.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
         { projectName: 'HackaTweet', stack: ['react.js', 'express.js'], collabs: ['Emilien Giraud', 'Nicolas Nguyen'], year: '2024', photo: 'hackatweet.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
         { projectName: 'TicketHack', stack: ['react.js'], collabs: ['Emilien Giraud', 'Karl Chareyre'], year: '2024', photo: 'tickethack.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
-        { projectName: 'EtiK', stack: ['swiftUI'], collabs: ['Emilien Giraud'], year: '2023', photo: 'Etik0.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
+        { projectName: 'EtiK', stack: ['swiftUI'], collabs: ['Emilien Giraud'], year: '2023', photo: 'etik0.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
         { projectName: 'myEcoTribe', stack: ['swiftUI'], collabs: ['Emilien Giraud'], year: '2023', photo: 'myecotribe.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
     ]
 
