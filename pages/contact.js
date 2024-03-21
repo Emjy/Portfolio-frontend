@@ -27,7 +27,7 @@ export default function contact() {
     const handleSendMessage = () => {
 
         if (name && firstName && society && tel && mail && message) {
-            fetch('https://portfolio-backend-zeta-sandy.vercel.app/contact', {
+            fetch('https://portfolio-backend-fap638pin-emjy-67ba5b66.vercel.app/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, firstName, society, tel, mail, message }),
