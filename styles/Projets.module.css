@@ -28,7 +28,7 @@
     flex-direction: column;
     padding-left: 100px;
     padding-top: 150px;
-    width: 50%;
+    width: 50vw;
     height: 100%;
     color: #B9D6F2;
     z-index: 2;
@@ -40,11 +40,9 @@
 
 .projectVisual {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;  
 }
-
 
 .separateur {
     background-color: #B9D6F2;
@@ -86,4 +84,32 @@
     padding-bottom: 32px;
     gap: 32px;
     overflow: auto ;
+}
+
+.photo {
+    display:flex;
+    object-fit: fill; 
+    border-radius: 90px;
+    transition: opacity 0.5s ease-in-out; 
+    max-height: 80vh; 
+    max-width: 40vw;
+    border: solid 16px black ;
+    box-shadow: 1px 1px 16px rgba(255, 255, 255, 0.3);
+
+
+}
+ 
+.stack {
+    color: #B9D6F2;
+    font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+    padding: 16px;
+}
+
+.rightContainer {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

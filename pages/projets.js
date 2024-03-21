@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 
 // Cmponents
-import CardProjet from '../components/CardProjet';
 import OpenMenu from '../components/OpenMenu';
 import BackP5 from '../components/HomePage/Background';
 
@@ -42,11 +41,12 @@ export default function projets() {
 
     // Datas
     const projectList = [
-        { projectName: 'LabUp', stack: ['react.js'], collabs: ['Emilien Giraud', 'Karl Chareyre', 'Nicolas Roulleau', 'Théo Siriex'], year: '2024', photo: 'emilien.jpeg', link: 'https://hackatweet-frontend-bice.vercel.app/' },
-        { projectName: 'Hackatweet', stack: ['react.js', 'express.js'], collabs: ['Emilien Giraud', 'Nicolas Nguyen'], year: '2024', photo: 'hackatweet.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
-        { projectName: 'TicketHack', stack: ['react.js'], collabs: ['Emilien Giraud', 'Karl Chareyre'], year: '2024', photo: 'pika.jpg', link: 'https://hackatweet-frontend-bice.vercel.app/' },
-        { projectName: 'EtiK', stack: ['swiftUI'], collabs: ['Emilien Giraud'], year: '2023', photo: 'emilien.jpeg', link: 'https://hackatweet-frontend-bice.vercel.app/' },
-        { projectName: 'myEcoTribe', stack: ['swiftUI'], collabs: ['Emilien Giraud'], year: '2023', photo: 'emilien.jpeg', link: 'https://hackatweet-frontend-bice.vercel.app/' },
+        { projectName: 'LabUp', stack: ['react.js'], collabs: ['Emilien Giraud', 'Karl Chareyre', 'Nicolas Roulleau', 'Théo Siriex'], year: '2024', photo: 'labup.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
+        { projectName: 'PokeSounds', stack: ['reactNative.js'], collabs: ['Emilien Giraud'], year: '2024', photo: 'pokesound.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
+        { projectName: 'HackaTweet', stack: ['react.js', 'express.js'], collabs: ['Emilien Giraud', 'Nicolas Nguyen'], year: '2024', photo: 'hackatweet.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
+        { projectName: 'TicketHack', stack: ['react.js'], collabs: ['Emilien Giraud', 'Karl Chareyre'], year: '2024', photo: 'tickethack.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
+        { projectName: 'EtiK', stack: ['swiftUI'], collabs: ['Emilien Giraud'], year: '2023', photo: 'Etik0.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
+        { projectName: 'myEcoTribe', stack: ['swiftUI'], collabs: ['Emilien Giraud'], year: '2023', photo: 'myecotribe.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
     ]
 
     // mapping des data projets
@@ -70,7 +70,6 @@ export default function projets() {
 
                 <div className={styles.projectCollabs}>
                     {item.collabs.join(', ')}
-
                 </div>
 
             </div>
@@ -99,18 +98,20 @@ export default function projets() {
                     <div className={styles.separateur}>
                         {' '}
                     </div>
-                    
+
                     <div className={styles.listeProjets}>
                         {projects}
                     </div>
 
                 </div>
 
+                <div className={styles.rightContainer}> 
+                    {projet && <img src={projet.photo} className={styles.photo} alt="" style={{ opacity: isHovered ? '1' : '0', transition: 'opacity 0.5s ease-in-out'}} />}
+ 
+                </div>
 
             </div>
-            <div>
-                <CardProjet isHovered={isHovered} projet={projet} />
-            </div>
+
 
 
         </>
