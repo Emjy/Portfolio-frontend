@@ -91,7 +91,7 @@
     object-fit: fill; 
     border-radius: 90px;
     transition: opacity 0.5s ease-in-out; 
-    max-height: 80vh; 
+    max-height: 60vh; 
     max-width: 40vw;
     border: solid 16px black ;
     box-shadow: 1px 1px 16px rgba(255, 255, 255, 0.3);
@@ -110,6 +110,14 @@
     width: 50vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    color: #B9D6F2;
     align-items: center;
     justify-content: center;
+    gap:64px ; 
+}
+
+.label {
+    font-size: 12px ; 
+    font-family: 'Roboto Mono', monospace; 
 }
