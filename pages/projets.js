@@ -48,7 +48,7 @@ export default function projets() {
     const projectList = [
     
         {
-            projectName: 'Portfolio François Giraud', stack: ['react.js'], collabs: ['Emilien Giraud'], year: '2024', photo: 'artPapa.png', link: '',
+            projectName: 'Portfolio d\'artiste', stack: ['react.js'], collabs: ['Emilien Giraud'], year: '2024', photo: 'artPapa.png', link: '',
             desc: 'Réalisation du portfolio complet avec gestion et administration autonome des upload de fichiers',
             projet: 'Projet de portfolio pour François Giraud'
         },
