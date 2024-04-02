@@ -29,7 +29,7 @@ export default function MenuList() {
     const menuData = [
         { number: '01', name: 'Accueil', router: '/' },
         { number: '02', name: 'Projets', router: '/projets' },
-        { number: '03', name: 'A propos', router: '/about' },
+        { number: '03', name: 'À-propos', router: '/about' },
         { number: '04', name: 'Contact', router: '/contact' }
     ]
 

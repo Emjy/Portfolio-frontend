@@ -46,13 +46,43 @@ export default function projets() {
 
     // Datas
     const projectList = [
-        { projectName: 'PortFolio François Giraud', stack: ['react.js'], collabs: ['Emilien Giraud'], year: '2024', photo: 'artPapa.png', link: 'https://art-papa-frontend.vercel.app' },
-        { projectName: 'LabUp', stack: ['react.js'], collabs: ['Emilien Giraud', 'Karl Chareyre', 'Nicolas Roulleau', 'Théo Siriex'], year: '2024', photo: 'labup.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
-        { projectName: 'PokeSounds', stack: ['reactNative.js'], collabs: ['Emilien Giraud'], year: '2024', photo: 'pokesound.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
-        { projectName: 'HackaTweet', stack: ['react.js', 'express.js'], collabs: ['Emilien Giraud', 'Nicolas Nguyen'], year: '2024', photo: 'hackatweet.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
-        { projectName: 'TicketHack', stack: ['react.js'], collabs: ['Emilien Giraud', 'Karl Chareyre'], year: '2024', photo: 'tickethack.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
-        { projectName: 'EtiK', stack: ['swiftUI'], collabs: ['Emilien Giraud'], year: '2023', photo: 'etik0.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
-        { projectName: 'myEcoTribe', stack: ['swiftUI'], collabs: ['Emilien Giraud'], year: '2023', photo: 'myecotribe.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
+    
+        {
+            projectName: 'Portfolio François Giraud', stack: ['react.js'], collabs: ['Emilien Giraud'], year: '2024', photo: 'artPapa.png', link: '',
+            desc: 'Réalisation du portfolio complet avec gestion et administration autonome des upload de fichiers',
+            projet: 'Projet de portfolio pour François Giraud'
+        },
+
+        {
+            projectName: 'LabUp', stack: ['react.js'], collabs: ['Emilien Giraud', 'Karl Chareyre', 'Nicolas Roulleau', 'Théo Siriex'], year: '2024', photo: 'labup.png', link: '',
+            desc: 'LabUp est une plateforme de création de pattern de creative coding permettant de générer des supports de communications simples et uniques pour les jeunes artistes.',
+            projet: 'Projet de fin d\'études, La Capsule'
+        },
+        {
+            projectName: 'PokeSounds', stack: ['reactNative.js'], collabs: ['Emilien Giraud'], year: '2024', photo: 'pokesound.png', link: '',
+            desc: 'PokeSounds est une application mobile permettant de jouer les sons les plus mythiques de la série de manga Pokemon',
+            projet: 'Peojet personnel mettant à profit les connaissances en développement mobile'
+        },
+        {
+            projectName: 'HackaTweet', stack: ['react.js', 'express.js'], collabs: ['Emilien Giraud', 'Nicolas Nguyen'], year: '2024', photo: 'hackatweet.png', link: '',
+            desc: 'Hackatweet est une plateforme Twitter-like',
+            projet: 'Hackathon, La capsule'
+        },
+        {
+            projectName: 'TicketHack', stack: ['react.js'], collabs: ['Emilien Giraud', 'Karl Chareyre'], year: '2024', photo: 'tickethack.png', link: '',
+            desc: 'TicketHack est une plateforme de réservation de train en ligne',
+            projet: 'Hackathon, La Capsule'
+        },
+        {
+            projectName: 'EtiK', stack: ['swiftUI'], collabs: ['Emilien Giraud'], year: '2023', photo: 'etik0.png', link: '',
+            desc: 'Etik est une application mobile permettant de mettre en relation les jeunes créateurs de mode éthique et les consommateurs soucieux de la provenance de leurs produits',
+            projet: 'Projet de fin d\'étude, Apple Foundation Program Extended'
+        },
+        {
+            projectName: 'myEcoTribe', stack: ['swiftUI'], collabs: ['Emilien Giraud'], year: '2023', photo: 'myecotribe.png', link: '',
+            desc: 'myEcotribe est une application mobile sociale permettant de réaliser et d\'apprendre les principaux écogestes pour un monde plus durable ',
+            projet: 'Projet de fin d\'étude, Apple Foundation Program'
+        },
     ]
 
     // mapping des data projets
@@ -63,19 +93,23 @@ export default function projets() {
             <div key={index}>
                 <div className={styles.year}>
                     {item.year}
+                    <div className={styles.projectCollabs}>
+                        {item.collabs.join(', ')}
+                    </div>
                 </div>
 
-                <Link href={item.link} target="_blank">
-                    <div className={styles.projectName}
-                        onMouseEnter={() => handleHover(item)}
-                        onMouseLeave={() => handleHover(null)}
-                    >
-                        {item.projectName}
-                    </div>
-                </Link>
+                {/* <Link href={item.link} target="_blank"> */}
+                <div className={styles.projectName}
+                    onMouseEnter={() => handleHover(item)}
+                    onMouseLeave={() => handleHover(null)}
+                >
+                    {item.projectName}
+                </div>
+                {/* </Link> */}
 
-                <div className={styles.projectCollabs}>
-                    {item.collabs.join(', ')}
+
+                <div className={styles.label}>
+                    {item.projet}
                 </div>
 
             </div>
@@ -93,7 +127,7 @@ export default function projets() {
 
             <div className={styles.page}>
 
-            <OpenMenu chemin={router.pathname} />
+                <OpenMenu chemin={router.pathname} />
 
                 <div className={styles.liste}>
 
@@ -110,11 +144,16 @@ export default function projets() {
                     </div>
 
                 </div>
+                {projet &&
+                    <div className={styles.rightContainer} style={{ opacity: isHovered ? '1' : '0', transition: 'opacity 0.5s ease-in-out' }}>
 
-                <div className={styles.rightContainer}> 
-                    {projet && <img src={projet.photo} className={styles.photo} alt="" style={{ opacity: isHovered ? '1' : '0', transition: 'opacity 0.5s ease-in-out'}} />}
- 
-                </div>
+                        <img src={projet.photo} className={styles.photo} alt="" />
+                        <div style={{width : '40vw', display:'flex', alignItems:'center', justifyContent:'center', textAlign:'center'}}>
+                            {projet.desc}
+                        </div>
+
+                    </div>
+                }
 
             </div>
 
