@@ -46,6 +46,7 @@ export default function projets() {
 
     // Datas
     const projectList = [
+        { projectName: 'PortFolio François Giraud', stack: ['react.js'], collabs: ['Emilien Giraud'], year: '2024', photo: 'artPapa.png', link: 'https://art-papa-frontend.vercel.app' },
         { projectName: 'LabUp', stack: ['react.js'], collabs: ['Emilien Giraud', 'Karl Chareyre', 'Nicolas Roulleau', 'Théo Siriex'], year: '2024', photo: 'labup.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
         { projectName: 'PokeSounds', stack: ['reactNative.js'], collabs: ['Emilien Giraud'], year: '2024', photo: 'pokesound.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
         { projectName: 'HackaTweet', stack: ['react.js', 'express.js'], collabs: ['Emilien Giraud', 'Nicolas Nguyen'], year: '2024', photo: 'hackatweet.png', link: 'https://hackatweet-frontend-bice.vercel.app/' },
