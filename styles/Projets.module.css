@@ -93,10 +93,7 @@
     transition: opacity 0.5s ease-in-out; 
     max-height: 60vh; 
     max-width: 40vw;
-    border: solid 16px black ;
     box-shadow: 1px 1px 16px rgba(255, 255, 255, 0.3);
-
-
 }
  
 .stack {
