@@ -3,7 +3,7 @@
 
 .container {
   display: flex;
-  width: 90vw;
+  width: 30vw;
   gap: 2rem;
   border-radius: 4rem;
   padding: 2rem;
@@ -11,7 +11,8 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  border: solid 1px #B9D6F2;
+  border: solid 1px #b9d6f2;
+  
 }
 
 .cardProjet {
@@ -34,11 +35,11 @@
 }
 
 .photo {
-  height: 20rem;
-  width: 20rem;
+  height: 8rem;
+  width: 8rem;
   object-fit: cover;
   border-radius: 2rem;
-  opacity: 0.5
+  opacity: 0.5;
 }
 
 .photo:hover {
@@ -57,22 +58,22 @@
   font-family: "Roboto Mono", monospace;
   font-size: 4rem;
   color: #b9d6f2;
-  transition: letter-spacing 1s ease-in-out;
 }
 
 .projectName:hover {
   color: #f9fbb2;
-  letter-spacing: 1rem;
-  transition: letter-spacing 0.3s ease-in-out;
 }
 
 .collabs {
   padding-left: 0.2rem;
   font-size: 0.5rem;
   font-family: "Roboto Mono", monospace;
+  color: #de8f6e;
 }
 
 .year {
+  display: flex;
+  justify-content: space-between;
   font-size: 2rem;
   font-family: "Roboto Mono", monospace;
   color: #de8f6e;
@@ -84,18 +85,30 @@
   font-style: italic;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1420px) {
   .projectName {
     font-size: calc(2rem + 1vw);
   }
-  .year {
-    font-size: calc(0.5rem + 1vw);
+
+  .description {
+    font-size: 0.5rem;
   }
-  .container {
-    flex-direction: column;
+  .year {
+    font-size: calc(1rem + 1vw);
   }
 
   .projectName:hover {
     letter-spacing: 0rem;
   }
+
+  .container {
+    width: 92vw;
+  }
+ 
+
+ 
 }
+
+
+ 
+

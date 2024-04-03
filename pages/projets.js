@@ -125,9 +125,9 @@ export default function projets() {
   const projects = projectList.map((item, index) => {
 
     return (
-      <div key={index}>
-        <ProjetCard projet={item} />
-      </div>
+     
+        <ProjetCard projet={item} key={index} />
+      
     );
   });
 

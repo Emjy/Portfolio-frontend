@@ -11,19 +11,22 @@ export default function ProjetCard(props) {
       <div className={styles.infos}>
         <div className={styles.year}>
           {props.projet.year}
-          <div className={styles.collabs}>
-            {props.projet.collabs.join(", ")}
-          </div>
+          <div className={styles.photoContainer}>
+        <img src={props.projet.photo} className={styles.photo} />
+      </div>
+          
         </div>
+        
 
         <div className={styles.projectName}>{props.projet.projectName}</div>
+        <div className={styles.collabs}>
+            {props.projet.collabs.join(", ")}
+          </div>
         <div className={styles.description}>{props.projet.desc}</div>
 
       </div>
 
-      <div className={styles.photoContainer}>
-        <img src={props.projet.photo} className={styles.photo} />
-      </div>
+     
     </div>
   );
 }
