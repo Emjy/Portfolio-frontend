@@ -6,17 +6,17 @@
     align-items: flex-start;
     justify-content: center;
     color: #B9D6F2;
-    gap: 32px;
+    gap: 3rem;
 }
 
 .menuNumber {
-    font-size: 30px;
+    font-size: 1rem;
     font-family: 'Major Mono Display', monospace;
 }
 
 .menuItem {
     display: flex;
-    font-size: 80px;
+    font-size: 3rem;
     font-family: 'Major Mono Display', monospace;
     animation: slideDown 0.5s ease-out forwards;
 }
@@ -41,23 +41,31 @@
 }
 
 .menuName:hover {
-    letter-spacing: 20px;
+    letter-spacing: 2rem;
     transition: letter-spacing 0.3s ease-in-out;
     color: #F9FBB2;
 }
 
 .closeIcon {
     position: absolute;
+    top: 0;
     right: 0;
-    margin: 50px;
     color: #B9D6F2;
+    align-self: last baseline;
+    margin: 2rem;
 }
 
 .icon {
-    font-size: 50px;
+    font-size: 2em;
 }
 
 .icon:hover {
     cursor: pointer;
     color: #F9FBB2;
 }
+
+@media screen and (max-width: 600px) {
+    .menuName:hover {  
+      letter-spacing: 0rem;
+    }
+  }

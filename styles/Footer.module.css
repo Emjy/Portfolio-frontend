@@ -1,6 +1,8 @@
 .contactIcons {
     display: flex;
-    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
     color: #586F7C;
     padding-bottom: 24px;
 }

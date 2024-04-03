@@ -12,8 +12,6 @@ import OpenMenu from '../components/OpenMenu';
 // MaterialUI
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 
-
-
 export default function Index() {
 
   const router = useRouter();

@@ -14,7 +14,7 @@ export default function OpenMenu() {
 
     return (
         <div className={styles.menuIcon}>
-            <MenuRoundedIcon  style={{ fontSize: '50px' }} onClick={() => router.push('./menu')} />
+            <MenuRoundedIcon  style={{ fontSize: '2em' }} onClick={() => router.push('./menu')} />
         </div>
     )
 }
