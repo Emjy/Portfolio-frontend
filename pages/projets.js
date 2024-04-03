@@ -93,7 +93,7 @@ export default function projets() {
       stack: ["react.js"],
       collabs: ["Emilien Giraud", "Karl Chareyre"],
       year: "2024",
-      photo: "Projets/Tickethack/logo.jpeg",
+      photo: "Projets/TicketHack/logo.jpeg",
       link: "",
       desc: "TicketHack est une plateforme de réservation de train en ligne",
       projet: "Hackathon, La Capsule",
