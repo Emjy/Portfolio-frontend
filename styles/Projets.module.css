@@ -28,7 +28,7 @@
   height: 1px;
 }
 
-.title {
+.entete {
   display: flex;
   align-self: center;
   font-family: 'Major Mono Display', monospace;

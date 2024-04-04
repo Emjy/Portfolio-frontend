@@ -141,7 +141,7 @@ export default function projets() {
       <div className={styles.page}>
         <OpenMenu chemin={router.pathname} />
 
-        <div className={styles.title}>{"Projets"}</div>
+        <div className={styles.entete}>{"Projets"}</div>
 
         <div className={styles.separateur}> </div>
 
