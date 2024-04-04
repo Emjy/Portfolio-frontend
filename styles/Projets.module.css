@@ -32,7 +32,8 @@
 .title {
   display: flex;
   align-self: center;
-  font-family: "Major Mono Display", monospace;
+  font-family: "Major Mono Display", monospace; 
+  /* repush */
   font-size: 3rem;
   color: #f9fbb2;
   padding-top: 5rem;
