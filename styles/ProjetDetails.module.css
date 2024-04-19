@@ -1,0 +1,71 @@
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    gap: 1rem;
+}
+
+.projectName {
+    color: white;
+    font-size: 10em;
+}
+
+.logoContainer {
+    padding: 2em 6em;
+    align-self: flex-start;
+}
+
+.logoContainer .logo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 2rem;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.story {
+    width: 50vw;
+    height: auto;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1rem;
+    color: #b9d6f2;
+    font-style: italic;
+    text-align: justify;
+}
+
+.screens {
+    display: flex; 
+    flex-direction: row; 
+    overflow: auto;
+}
+
+
+.screenContainer { 
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.3));
+    margin: 10px;
+    overflow: auto;
+}
+
+.screenImage {
+    width: 100%;
+    height: auto;
+}

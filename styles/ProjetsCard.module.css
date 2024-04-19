@@ -38,6 +38,7 @@
   object-fit: cover;
   border-radius: 2rem;
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .photo:hover {
@@ -56,6 +57,12 @@
   font-family: "Roboto Mono", monospace;
   font-size: 4rem;
   color: #b9d6f2;
+  text-decoration: none;
+  }
+  
+  .linkArrow {
+    font-size: 2rem;
+      color: #fff;
 }
 
 .projectName:hover {
