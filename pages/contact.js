@@ -7,6 +7,7 @@ import styles from '../styles/Contact.module.css';
 // Components 
 import OpenMenu from '../components/OpenMenu';
 import BackP5 from '../components/HomePage/Background';
+import Title from '../components/Title';
 
 // Material UI  
 import TextField from '@mui/material/TextField';
@@ -69,13 +70,7 @@ export default function contact() {
 
             <OpenMenu chemin={router.pathname} />
 
-                <div className={styles.title}>
-                    {'Contact'}
-                </div>
-
-                <div className={styles.separateur}>
-                    {' '}
-                </div>
+                <Title title={'Contact'} />
 
 
                 <div className={styles.inputs}>

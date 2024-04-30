@@ -7,6 +7,7 @@ import styles from "../styles/About.module.css";
 // Components
 import OpenMenu from "../components/OpenMenu";
 import BackP5 from "../components/HomePage/Background";
+import Title from "../components/Title";
 
 // Material UI
 import LinearProgress from "@mui/material/LinearProgress";
@@ -75,11 +76,8 @@ export default function about() {
 
       <div className={styles.page}>
         <OpenMenu chemin={router.pathname} />
-        <div className={styles.entete}>
-          {"À propos"}
-        </div>
 
-        <div className={styles.separateur}>   </div>
+        <Title title= {'À Propos'}/>
 
 
         <div className={styles.description}>
