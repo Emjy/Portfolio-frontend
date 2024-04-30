@@ -12,7 +12,7 @@ export default function ProjetCard(props) {
         <div className={styles.year}>
           {props.projet.year}
           <div className={styles.photoContainer}>
-        <img src={props.projet.photo} className={styles.photo} />
+            <img src={props.projet.photo} className={styles.photo} alt={props.projet.projectName} />
       </div>
           
         </div>
