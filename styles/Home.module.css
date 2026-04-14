@@ -1,71 +1,113 @@
-
-.background {
+.bg {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-position: center;
+  inset: 0;
   z-index: 0;
 }
 
 .page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  color: #b9d6f2;
+  position: relative;
+  z-index: 1;
+  height: 100dvh;
+  overflow: hidden;
+  padding: 0 var(--pad-x);
 }
 
-.text {
+/* ─── Hero — centré dans l'espace sous la navbar ── */
+.hero {
+  position: absolute;
+  top: calc(50% + var(--nav-h) / 2);
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 5rem;
+  text-align: center;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 0 var(--pad-x);
+}
+
+.greeting {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
 }
 
 .name {
-  color: #f9fbb2;
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  color: var(--text);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  text-align: center;
 }
 
-.presentation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-items: center;
-  font-family: "Major Mono Display", monospace;
-  font-size: calc(2vw + 1.5rem); /* Ajustement dynamique avec une taille minimale */
-  color: #b9d6f2;
-  gap: 40px;
+/* Blinking cursor */
+.cursor {
+  display: inline-block;
+  width: 0.08em;
+  height: 0.85em;
+  background: var(--accent);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  margin-left: 0.1em;
+  border-radius: 1px;
 }
 
-.subText {
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.role {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ─── CTA ────────────────────────────────────────── */
+.cta {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Major Mono Display", monospace;
-  font-size: 1rem;
   gap: 1rem;
-}
-
-.links {
-  display: flex;
-  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  font-family: "Roboto Mono", monospace;
-  border: 1px solid;
-  border-radius: 5rem;
 }
 
-.links:hover {
+.btnPrimary,
+.btnOutline {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  padding: 0.65rem 1.5rem;
+  border-radius: 9999px;
+  transition: all var(--t-base);
   cursor: pointer;
-  background-color: #f9fbb2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btnPrimary {
+  background: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
+}
+.btnPrimary:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btnOutline:hover {
+  border-color: var(--border-hover);
+  color: var(--text);
 }

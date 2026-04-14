@@ -1,24 +1,30 @@
-.contactIcons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-    color: #586F7C;
-    padding-bottom: 24px;
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  color: var(--muted);
 }
 
 .icon {
-    font-size: 24px;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-    border: 1px solid;
-    border-radius: 30px;
-    padding: 8px;
+  font-size: 20px !important;
+  width: 36px !important;
+  height: 36px !important;
+  padding: 7px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color var(--t-fast), border-color var(--t-fast), transform var(--t-fast), background var(--t-fast);
 }
 
- 
 .icon:hover {
-    cursor: pointer;
-    background-color: #F9FBB2;
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
