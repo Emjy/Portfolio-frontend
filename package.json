@@ -20,6 +20,9 @@
     "react-dom": "^19.0.0",
     "react-icon-cloud": "^4.1.4"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "devDependencies": {
     "@types/node": "^20",
     "@types/p5": "^1.7.7",
