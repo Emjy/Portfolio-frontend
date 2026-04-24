@@ -18,7 +18,8 @@
     "p5": "^1.9.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icon-cloud": "^4.1.4"
+    "react-icon-cloud": "^4.1.4",
+    "resend": "^6.12.2"
   },
   "engines": {
     "node": ">=20"

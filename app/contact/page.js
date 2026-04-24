@@ -6,7 +6,7 @@ import bgStyles from '../../styles/PageBg.module.css';
 import ParticleBackground from '../../components/ParticleBackground';
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', tel: '', message: '' });
   const [status, setStatus] = useState('');
 
   const handleChange = (e) =>
@@ -19,24 +19,19 @@ export default function Contact() {
       return;
     }
     try {
-      const res = await fetch(
-        'https://portfolio-backend-zeta-sandy.vercel.app/contact',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name:      form.name,
-            firstName: '',
-            society:   '',
-            tel:       '',
-            mail:      form.email,
-            message:   form.message,
-          }),
-        }
-      );
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name:    form.name,
+          email:   form.email,
+          tel:     form.tel,
+          message: form.message,
+        }),
+      });
       const data = await res.json();
       if (data.result) {
-        setForm({ name: '', email: '', message: '' });
+        setForm({ name: '', email: '', tel: '', message: '' });
         setStatus('Message envoyé.');
       } else {
         setStatus('Erreur, réessayez.');
@@ -90,6 +85,19 @@ export default function Contact() {
               />
             </label>
           </div>
+
+          <label className={styles.field}>
+            <span className={styles.label}>téléphone</span>
+            <input
+              name="tel"
+              type="tel"
+              placeholder="+33 6 00 00 00 00"
+              value={form.tel}
+              onChange={handleChange}
+              className={styles.input}
+              autoComplete="tel"
+            />
+          </label>
 
           <label className={styles.field}>
             <span className={styles.label}>message</span>
