@@ -1,19 +1,15 @@
 .wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .layer {
   position: absolute;
   inset: 0;
-  z-index: 1;
-  transition: opacity 1s ease;
-}
-
-.fadeOut {
-  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* ─── Dots ───────────────────────────── */
@@ -24,14 +20,14 @@
   transform: translateX(-50%);
   display: flex;
   gap: 0.35rem;
-  z-index: 3;
+  z-index: 4;
 }
 
 .dot {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.4);
   transition: background 0.3s ease, transform 0.3s ease;
 }
 

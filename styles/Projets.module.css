@@ -29,12 +29,13 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
-/* ─── Card link wrapper ──────────────── */
-.cardLink {
-  display: contents;
+/* ─── Card wrapper ───────────────────── */
+.cardLink,
+.cardWrap {
+  display: block;
   text-decoration: none;
   color: inherit;
 }
@@ -47,36 +48,37 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  cursor: default;
+  will-change: transform;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
   border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-/* ─── Visual ─────────────────────────── */
+/* ─── Visual (image, full-bleed, no border-radius) ── */
 .visual {
   position: relative;
-  aspect-ratio: 16 / 9;
+  width: 100%;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
-/* ─── Overlay ────────────────────────── */
+/* ─── Overlay hover ──────────────────── */
 .overlay {
   position: absolute;
-  z-index: 2;
   inset: 0;
-  background: rgba(15, 15, 20, 0.82);
+  z-index: 3;
+  background: rgba(10, 10, 18, 0.75);
   backdrop-filter: blur(4px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
-  padding: 1.25rem;
-  gap: 0.75rem;
+  justify-content: center;
+  padding: 1.5rem;
+  gap: 0.9rem;
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.25s ease, transform 0.25s ease;
@@ -90,7 +92,7 @@
 .overlayDesc {
   font-size: var(--text-sm);
   color: rgba(255, 255, 255, 0.88);
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
 }
 
@@ -101,29 +103,23 @@
   color: #fff;
   background: var(--accent);
   border-radius: 9999px;
-  padding: 0.4rem 1rem;
-  transition: background 0.15s ease;
-  text-decoration: none;
+  padding: 0.45rem 1.1rem;
   white-space: nowrap;
 }
 
-.overlayLink:hover {
-  background: #4f46e5;
-}
-
-/* ─── Info ───────────────────────────── */
-.info {
-  padding: 1.25rem 1.25rem 1.4rem;
+/* ─── Info bar : fond neutre sous l'image ── */
+.infoBar {
+  padding: 1rem 1.1rem 1.15rem;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  flex: 1;
+  gap: 0.5rem;
+  background: var(--bg-surface);
 }
 
-.infoTop {
+.infoMeta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.6rem;
 }
 
 .year {
@@ -152,18 +148,17 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-top: auto;
-  padding-top: 0.4rem;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
 }
 
 .tag {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-family: var(--font-mono);
   color: var(--muted);
   border: 1px solid var(--border);
   border-radius: 9999px;
-  padding: 0.15rem 0.6rem;
+  padding: 0.12rem 0.55rem;
   letter-spacing: 0.05em;
   transition: border-color 0.15s ease, color 0.15s ease;
 }
@@ -175,13 +170,9 @@
 
 /* ─── Responsive ─────────────────────── */
 @media (max-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 560px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+  .grid { grid-template-columns: 1fr; }
 }
