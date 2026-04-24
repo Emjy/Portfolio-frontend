@@ -10,8 +10,8 @@ export async function POST(req) {
   }
 
   const { error } = await resend.emails.send({
-    from: 'Portfolio <onboarding@resend.dev>',
-    to: 'emilien.giraud+claude@gottaphish.com',
+    from: 'Portfolio <contact@emiliengiraud.fr>',
+    to: 'emiliengiraud.free@gmail.com',
     subject: `Nouveau message de ${name}`,
     html: `
       <p><strong>Nom :</strong> ${name}</p>
